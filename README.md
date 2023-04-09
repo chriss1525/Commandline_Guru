@@ -6,10 +6,16 @@ Telegram Terminal Bot is a bot that helps newbies in tech learn how to interact 
 
 Open a chat with the bot @commandline_guru_bot and type any of the following commands:
 
-- '/make directory': shows how to create a new directory
-- '/empty file': shows how to create an empty file
-- '/repository': shows how to create a new repository
-- '/navigate': shows how to navigate the terminal
+- /make_directory - how to create a new directory
+- /list_files: how to list files in your currenct directory
+- /change_directory: how to change your current directory
+- /check_path: how to check the path you are currently in
+- /print_file: how to print the contents of a file
+- /display_txt: how to display the contents of a file on the terminal
+- /open_file: how to open a file on the terminal for editing purposes
+- /new_file: how to create an empty file
+- /delete_file: how to delete a file in the terminal
+- /delete_directory: how to delete an empty directory
 
 ## Contributing
 
