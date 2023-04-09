@@ -1,6 +1,6 @@
 # Telegram Terminal Bot
 
-Telegram Terminal Bot is a bot that helps newbies in tech learn how to interact with the terminal. The bot provides helpful commands and tips to navigate, create directories, and more.
+Telegram Terminal Bot is a bot that helps newbies in tech learn how to interact with the terminal. The bot provides helpful commands and tips to navigate the terminal, create directories, and more.
 
 ## Usage
 
