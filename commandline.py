@@ -3,18 +3,14 @@ import telegram
 from telegram.update import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters
 import telegram.ext
-import spacy
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 token = os.getenv('TOKEN')
 
-#print(token)
-# bot = telegram.Bot(token=token)
-# nlp = spacy.load("en_core_web_sm")
 
-updater = telegram.ext.Updater(token, use_context=True)
+updater = Updater(token, use_context=True)
 
 
 def start(update: Update, context: CallbackContext):
@@ -28,7 +24,7 @@ updater.dispatcher.add_handler(CommandHandler('start', start))
 def help(update: Update, context: CallbackContext):
     update.message.reply_text(
         """
-        Type any of the prompts given to learn how to perform the task :- 
+        What do you want to do? Type any of the prompts :- 
         /make_directory - how to create a new directory
         /list_files - how to list files in your currenct directory
         /change_directory - how to change your current directory
@@ -46,10 +42,6 @@ updater.dispatcher.add_handler(CommandHandler('help', help))
 
 
 def make_directory(update: Update, context: CallbackContext):
-    # get user's message
-    # user_message = update.message.text
-    # process user message
-
     # logic to create a new directory
     update.message.reply_text(
         "To create a new directory, use the `mkdir` command followed by the name of the directory you want to create. For example, to create a directory called 'my_directory', you can run the following command in your terminal:\n\n"
@@ -64,7 +56,7 @@ updater.dispatcher.add_handler(
 
 
 def change_directory(update: Update, context: CallbackContext):
-    # logic to navigate the terminal
+    # logic to change directories the terminal
     update.message.reply_text(
         "To change directories within the repository or directory you're in, use the `cd` command followed by the name of the directory you want to change to.for example if you want to move to 'my_directory' type the command:\n\n"
         "```\n"
@@ -122,6 +114,7 @@ def print_file(update: Update, context: CallbackContext):
 updater.dispatcher.add_handler(CommandHandler('print_file', print_file))
 
 def display_txt(update: Update, context: CallbackContext):
+    # logic to echo items on the terminal
     update.message.reply_text(
         "To display a line of text/string in the terminal use the 'echo' command. To use it, simply type the `echo` command followed by the text/string you want to display. For example:\n\n"
         "```\n"
@@ -132,6 +125,7 @@ def display_txt(update: Update, context: CallbackContext):
 updater.dispatcher.add_handler(CommandHandler('echo', display_txt))
 
 def open_file(update: Update, context: CallbackContext):
+    # logic to open file in vi
     update.message.reply_text(
         "To open a file in the terminal use the 'vi' command. To use it, simply type the `vi` command followed by the name of the file you want to open. For example:\n\n"
         "```\n"
@@ -144,8 +138,9 @@ def open_file(update: Update, context: CallbackContext):
 updater.dispatcher.add_handler(CommandHandler('open_file', open_file))
 
 def new_file(update: Update, context: CallbackContext):
+    # logic to create a new file
     update.message.reply_text(
-        "The `touch` command is used to create a new file in the terminal. To use it, simply type the `touch` command followed by the name of the file you want to create. For example:\n\n"
+        "To create a new file in the terminal use the 'touch' command. To use it, simply type the `touch` command followed by the name of the file you want to create. For example:\n\n"
         "```\n"
         "touch myfile.txt\n"
         "```\n"
@@ -154,8 +149,9 @@ def new_file(update: Update, context: CallbackContext):
 updater.dispatcher.add_handler(CommandHandler('new_file', new_file))
 
 def delete_file(update: Update, context: CallbackContext):
+    # logic to delete a file
     update.message.reply_text(
-        "The `rm` command is used to delete a file in the terminal. To use it, simply type the `rm` command followed by the name of the file you want to delete. For example:\n\n"
+        "To delete a file in the terminal use the 'rm' command. To use it, simply type the `rm` command followed by the name of the file you want to delete. For example:\n\n"
         "```\n"
         "rm myfile.txt\n"
         "```\n"
@@ -164,8 +160,9 @@ def delete_file(update: Update, context: CallbackContext):
 updater.dispatcher.add_handler(CommandHandler('delete_file', delete_file))
 
 def delete_dir(update: Update, context: CallbackContext):
+    # logic to delete empty directory
     update.message.reply_text(
-        "The `rmdir` command is used to delete an empty directory in the terminal. To use it, simply type the `rmdir` command followed by the name of the directory you want to delete. For example:\n\n"
+        "To delete an empty directory in the terminal use the 'rmdir' command. To use it, simply type the `rmdir` command followed by the name of the directory you want to delete. For example:\n\n"
         "```\n"
         "rmdir mydirectory\n"
         "```\n"
@@ -175,6 +172,7 @@ updater.dispatcher.add_handler(CommandHandler('delete_directory', delete_dir))
 
 
 def reply_to_text(update: Update, context: CallbackContext):
+    # Handel normal text responses
     text = update.message.text.lower()
 
     if text == "yes":
@@ -194,7 +192,27 @@ def reply_to_text(update: Update, context: CallbackContext):
     elif text == "change directory":
         #change directory
         change_directory(update, context)
-
+    elif text == "check path":
+        # pwd
+        check_path(update, context)
+    elif text == "display text":
+        # echo
+        display_txt(update, context)
+    elif text == "print_file":
+        # cat
+        print_file(update, context)
+    elif text == "open file":
+        # vi
+        open_file(update, context)
+    elif text == "new file":
+        # touch
+        new_file(update, context)
+    elif text == "delete file":
+        # delete file
+        delete_file(update, context)
+    elif text == "delete directory":
+        # delete empty diretory
+        delete_dir(update, context)
     elif text == "thank you":
         # Send thank you message
         update.message.reply_text("You're welcome!")
