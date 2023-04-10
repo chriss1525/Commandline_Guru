@@ -198,7 +198,7 @@ def reply_to_text(update: Update, context: CallbackContext):
     elif text == "display text":
         # echo
         display_txt(update, context)
-    elif text == "print_file":
+    elif text == "print file":
         # cat
         print_file(update, context)
     elif text == "open file":
