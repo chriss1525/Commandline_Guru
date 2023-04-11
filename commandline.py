@@ -6,8 +6,9 @@ import telegram.ext
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 token = os.getenv('TOKEN')
+
 
 
 updater = Updater(token, use_context=True)
