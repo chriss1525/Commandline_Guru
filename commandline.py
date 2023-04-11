@@ -196,6 +196,10 @@ def reply_to_text(update: Update, context: CallbackContext):
     # dictionary of text commands and their corresponding functions
     commands = {
         "help": help,
+        "yes": help,
+        "yeah": help,
+        "sure": help,
+        "yes please": help,
         "make directory": make_directory,
         "delete file": delete_file,
         "list files": list_files,
