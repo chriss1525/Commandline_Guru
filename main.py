@@ -7,6 +7,21 @@ import numpy
 import random
 import json
 
+# 
 with open("intents.json") as file:
     data = json.load(file)
-print(data["intents"])
+
+Words = []
+docs = []
+labels = []
+
+# loop through intents dictionary
+for intent in data:
+    for pattern in intent:
+        # tokenize patterns
+        twords = nltk.word_tokenize(pattern)
+        Words.extend(twords)
+        docs.append(pattern)
+
+        if intent["tag"] not in labels:
+            labels.append("intent")
