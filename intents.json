@@ -1,0 +1,26 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hi bot"],
+     "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?","Hello, need any help?"],
+     "context_set": ""
+    },
+    {
+        "tag": "terminal help",
+        "patterns": ["help", "how to navigate the terminal", "How do I use the terminal"],
+        "responses": ["What are you trying to do?", "how can I help?", "What seems to be the trouble?"],
+        "context_set": ""
+    },
+    {
+        "tag": ["ls"],
+        "patterns": ["how do I list files in the current working directory?", "I want to list files on the terminal", "command to list files", "list files in directory"],
+        "responses":["To list the files in your current directory, use the `ls` command", "The `ls` command lists the filenames of files in your current directory", "Try the `ls` command to list the files in your current directory", "Have you tried the `ls` command?"],
+        "context_set": ""
+    },
+    {
+        "tag": ["pwd"],
+        "patterns": ["How to print current working directory on the terminal", "How do I find my current working directory?", "I want to print my current working directory on the terminal", "what is my current working directory?"],
+        "responses":["To check your current path, use the `pwd` command. For example, run the following command in your terminal","Have you tried the `pwd` command?", "`pwd` prints the current working directory", "I think the command you are looking for is `pwd`"],
+        "context_set": ""
+    }
+]
+}
