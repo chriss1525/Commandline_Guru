@@ -1,8 +1,25 @@
-# Telegram Terminal Bot
+# Project Name and Description
 
-Telegram Terminal Bot is a bot that helps newbies in tech learn how to interact with the terminal. The bot provides helpful commands and tips to navigate the terminal, create directories, and more.
+Commandline_Guru is a Telegram bot designed to provide useful command-line tips and tricks to users. It aims to help users improve their productivity and efficiency when working on the command line.
 
-## Usage
+## Features
+
+Some of the key features of Commandline_Guru include:
+
+- Providing tips and tricks for working on the command line, including useful commands and keyboard shortcuts
+- Allowing users to search for specific tips using keywords or phrases
+- Providing random tips and tricks for users who want to learn something new
+- Allowing users to save their favorite tips for later reference
+- Providing a friendly, conversational interface that makes learning about the command line more engaging and enjoyable
+
+## Technologies Used
+
+Commandline_Guru was built using the following technologies:
+
+- Python 3
+- Telepot library for building Telegram bots
+
+### Usage
 
 Open a chat with the bot @commandline_guru_bot and type any of the following commands:
 
@@ -17,6 +34,18 @@ Open a chat with the bot @commandline_guru_bot and type any of the following com
 - /delete_file: how to delete a file in the terminal
 - /delete_directory: how to delete an empty directory
 
-## Contributing
+### Future Work
 
-If you want to contribute to this project, you're more than welcome! Simply fork this repository, make your changes, and submit a pull request.
+
+In the future, I plan to add the following features to Commandline_Guru:
+
+- Support for multiple languages, so users can receive tips in their preferred language
+- Integration with external APIs and services to provide even more helpful tips and tricks
+- Support for sharing tips and tricks with other users and on social media platforms
+
+
+### Contributors
+This project was developed by (Christine Okoth)[https://github.com/Chriss1525], with contributions from (Akuya Ekorot)[https://github.com/akuya-ekorot].
+
+License
+Commandline_Guru is released under the MIT License.
