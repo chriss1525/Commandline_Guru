@@ -19,9 +19,49 @@ Commandline_Guru was built using the following technologies:
 - Python 3
 - Telepot library for building Telegram bots
 
-### Usage
+## Usage
 
-Open a chat with the bot @commandline_guru_bot and type any of the following commands:
+
+To use this program, you will need to have Python 3 installed on your computer.
+
+### Cloning The Repository
+
+To clone the repository, open a terminal and run the following command:
+
+> git clone https://github.com/chriss1525/Commandline_Guru.git
+
+### Installing Dependencies
+
+Once you have cloned the repository, navigate to the project directory and install the necessary dependencies by running:
+
+> pip install python-telegram-bot
+
+### Running the Program
+
+To run the program, navigate to the project directory in your terminal and run the following command:
+
+> python commandline_guru.py
+
+### Setting Up Your Telegram Bot
+
+To use this program with your own Telegram Bot, you will need to create a bot account and obtain a bot token. Here's how to do it:
+
+- Open Telegram and search for the @BotFather bot.
+
+- Start a chat with @BotFather and send the command /newbot.
+
+- Follow the instructions to provide a name and username for your bot.
+
+- Once you have created the bot, @BotFather will give you a bot token. Make sure to copy and save it in a secure place.
+
+- Create a .env file and store your bot token as Token='your_bot_token_here'
+
+- Configure your bot's settings in the Telegram Bot API as desired.
+
+That's it! Once you have obtained your bot token and configured your bot in the Telegram Bot API, you can run the program and start interacting with your bot.
+
+
+If you keep the current configurations of the bot, open a chat with the bot @commandline_guru_bot and type any of the following commands:
 
 - /make_directory - how to create a new directory
 - /list_files: how to list files in your currenct directory
