@@ -85,7 +85,7 @@ In the future, I plan to add the following features to Commandline_Guru:
 
 
 ### Contributors
-This project was developed by (Christine Okoth)[https://github.com/Chriss1525], with contributions from (Akuya Ekorot)[https://github.com/akuya-ekorot].
+This project was developed by [Christine Okoth](https://github.com/Chriss1525), with contributions from [Akuya Ekorot](https://github.com/akuya-ekorot).
 
 License
 Commandline_Guru is released under the MIT License.
