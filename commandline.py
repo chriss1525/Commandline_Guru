@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import telegram
-from telegram.update import Update
+from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters
 import telegram.ext
 import os
@@ -10,8 +10,10 @@ from dotenv import load_dotenv
 token = os.getenv('TOKEN')
 
 
+bot = telegram.Bot(token=token)
+updater = telegram.ext.Updater(bot=bot, use_context=True)
 
-updater = Updater(token, use_context=True)
+
 
 
 def start(update: Update, context: CallbackContext):
