@@ -1,4 +1,4 @@
-# Project Name and Description
+# Commandline_Guru
 
 Commandline_Guru is a Telegram bot designed to provide useful command-line tips and tricks to users. It aims to help users improve their productivity and efficiency when working on the command line.
 
