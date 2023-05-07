@@ -6,14 +6,14 @@ import telegram.ext
 import os
 from dotenv import load_dotenv
 
-#load_dotenv()
+# load_dotenv()
 token = os.getenv('TOKEN')
 
 
-bot = telegram.Bot(token=token)
+bot = telegram.Bot(
+    token=token, request=telegram.utils.request.Request(con_pool_size=8))
+
 updater = telegram.ext.Updater(bot=bot, use_context=True)
-
-
 
 
 def start(update: Update, context: CallbackContext):
